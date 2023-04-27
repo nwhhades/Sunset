@@ -1,0 +1,66 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.whiner.sunset'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.whiner.sunset"
+        minSdk 19
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+    }
+
+    signingConfigs {
+        naizhe {
+            storeFile file('whiner.jks')
+            storePassword '88888888'
+            keyAlias 'key'
+            keyPassword '666666'
+        }
+        sys {
+            storeFile file('platform.keystore')
+            storePassword 'android'
+            keyAlias 'platform'
+            keyPassword 'android'
+        }
+    }
+
+    buildTypes {
+        debug {
+            debuggable true
+            minifyEnabled true
+            signingConfig signingConfigs.sys
+            //signingConfig signingConfigs.naizhe
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        release {
+            debuggable true
+            minifyEnabled true
+            signingConfig signingConfigs.naizhe
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+
+    implementation project(path: ':tvkit')
+
+    //下载
+    implementation "com.liulishuo.okdownload:okdownload:1.0.7"
+    implementation "com.liulishuo.okdownload:sqlite:1.0.7"
+    implementation "com.liulishuo.okdownload:okhttp:1.0.7"
+
+}

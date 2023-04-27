@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="BaseAppTheme" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@color/window_bg</item>
+    </style>
+
+    <style name="RoundedImageView" parent="android:Widget">
+        <item name="strokeColor">@color/material_on_surface_stroke</item>
+        <item name="shapeAppearance">@style/RoundedStyleShapeAppearance</item>
+        <item name="android:scaleType">fitXY</item>
+    </style>
+
+    <style name="RoundedStyleShapeAppearance">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/rounded_radius</item>
+    </style>
+
+    <style name="ProgressBar" parent="Widget.Material3.LinearProgressIndicator">
+        <item name="indicatorColor">@color/focus_focused</item>
+        <item name="trackColor">@color/focus_normal</item>
+        <item name="trackCornerRadius">@dimen/rounded_radius</item>
+        <item name="trackThickness">120pt</item>
+    </style>
+
+    <style name="CircularProgressBar" parent="Widget.Material3.CircularProgressIndicator">
+        <item name="indicatorColor">@color/focus_focused</item>
+        <item name="trackColor">@color/focus_normal</item>
+        <item name="indicatorSize">200pt</item>
+        <item name="trackThickness">20pt</item>
+    </style>
+
+    <style name="TvButton" parent="Widget.Material3.CheckedTextView">
+        <item name="android:background">@drawable/btn_bg_card1</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:textAlignment">gravity</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/text_color</item>
+    </style>
+
+    <style name="TvSwitch" parent="Theme.Material3.DayNight">
+        <item name="android:background">@null</item>
+        <item name="thumbTint">@color/white</item>
+        <item name="trackTint">@color/sw_track_tint</item>
+        <item name="trackDecorationTint">@color/tr</item>
+    </style>
+
+    <style name="TvCheckBox" parent="Theme.Material3.DayNight">
+        <item name="android:background">@null</item>
+        <item name="buttonTint">@color/cb_button_tint</item>
+    </style>
+
+    <style name="TvRadioButton" parent="Theme.Material3.DayNight">
+        <item name="android:background">@null</item>
+        <item name="buttonTint">@color/rb_button_tint</item>
+    </style>
+
+    <style name="TvSlider" parent="Theme.Material3.DayNight">
+        <item name="android:valueFrom">0</item>
+        <item name="android:valueTo">100</item>
+        <item name="android:value">10</item>
+        <item name="labelBehavior">gone</item>
+        <item name="haloColor">@color/focus_focused</item>
+        <item name="haloRadius">65pt</item>
+        <item name="thumbColor">@color/slider_button_tint</item>
+        <item name="thumbRadius">25pt</item>
+        <item name="trackColorActive">@color/focus_focused</item>
+        <item name="trackColorInactive">@color/focus_normal</item>
+        <item name="trackHeight">10pt</item>
+    </style>
+
+    <style name="TvTextLayout" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="colorPrimary">@color/focus_focused</item>
+        <item name="boxStrokeColor">@color/text_box_stroke_color</item>
+        <item name="boxStrokeWidth">2dp</item>
+    </style>
+
+</resources>

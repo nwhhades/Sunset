@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_bg_card1"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:text="Hello World!"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatCheckedTextView
+        android:id="@+id/btn1"
+        android:layout_width="600pt"
+        android:layout_height="300pt"
+        android:layout_margin="100pt"
+        android:background="@drawable/btn_bg_card1"
+        android:checked="true"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatCheckedTextView
+        android:id="@+id/btn2"
+        android:layout_width="600pt"
+        android:layout_height="300pt"
+        android:layout_margin="100pt"
+        android:background="@drawable/btn_bg_card1"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv_round"
+        style="@style/RoundedImageView"
+        android:layout_width="600pt"
+        android:layout_height="600pt"
+        android:theme="@style/RoundedImageView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.materialswitch.MaterialSwitch
+        android:id="@+id/sw1"
+        style="@style/TvSwitch"
+        android:layout_width="400pt"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="300pt"
+        android:theme="@style/TvSwitch"
+        app:layout_constraintStart_toEndOf="@id/iv_round"
+        app:layout_constraintTop_toTopOf="@id/iv_round" />
+
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/cb1"
+        style="@style/TvCheckBox"
+        android:layout_width="400pt"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="300pt"
+        app:layout_constraintStart_toEndOf="@id/sw1"
+        app:layout_constraintTop_toTopOf="@id/sw1" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="300pt"
+        app:layout_constraintStart_toEndOf="@id/cb1"
+        app:layout_constraintTop_toTopOf="@id/cb1">
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/rb1"
+            style="@style/TvRadioButton"
+            android:layout_width="400pt"
+            android:layout_height="wrap_content"
+            android:theme="@style/TvRadioButton" />
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/rb2"
+            style="@style/TvRadioButton"
+            android:layout_width="400pt"
+            android:layout_height="wrap_content"
+            android:theme="@style/TvRadioButton" />
+    </RadioGroup>
+
+    <com.google.android.material.slider.Slider
+        style="@style/TvSlider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100pt"
+        android:theme="@style/TvSlider"
+        app:layout_constraintBottom_toTopOf="@id/cb1" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="700pt"
+        android:layout_height="300pt"
+        android:layout_marginStart="600pt"
+        android:hint="合理"
+        android:textColorHint="@color/white"
+        android:theme="@style/TvTextLayout"
+        app:helperText="请输入密码"
+        app:helperTextTextColor="@color/black"
+        app:hintTextColor="@color/text_box_stroke_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textPassword"
+            android:maxLength="5"
+            android:textColor="@color/white" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
